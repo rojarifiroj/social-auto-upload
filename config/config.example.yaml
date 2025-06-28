@@ -1,0 +1,125 @@
+# Social Auto Upload Configuration Example File
+# Copy this file to config.yaml and modify according to your actual situation
+
+# Basic Configuration
+base:
+  base_dir: "."
+  log:
+    level: "INFO"
+    file: "logs/sau.log"
+    max_size: "10MB"
+    backup_count: 5
+
+# Browser Configuration
+browser:
+  # Modify Chrome path according to your system
+  chrome_path: "C:/Program Files/Google/Chrome/Application/chrome.exe"
+  chrome_path_mac: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  chrome_path_linux: "/usr/bin/google-chrome"
+  
+  args:
+    - "--no-sandbox"
+    - "--disable-dev-shm-usage"
+
+# Video Processing Configuration
+video:
+  video_dir: "videos"
+  supported_formats: [".mp4", ".avi", ".mov", ".mkv"]
+  max_file_size: 500
+  timeout: 300
+
+# Upload Configuration
+upload:
+  default_publish_type: 0
+  default_daily_times: [6, 11, 14, 16, 22]
+  max_uploads_per_day: 5
+  upload_interval: 30
+
+# Platform Configurations
+platforms:
+  douyin:
+    enabled: true
+    cookie_file: "cookies/douyin_uploader/account.json"
+    title_file: "douyin_title_p.txt"
+    upload_record: "upload_record.json"
+    settings:
+      auto_cover: true
+      auto_hashtag: true
+      max_title_length: 100
+      max_description_length: 2000
+
+  tencent:
+    enabled: true
+    cookie_file: "cookies/tencent_uploader/account.json"
+    title_file: "tencent_title_p.txt"
+    upload_record: "tencent_upload_record.json"
+    settings:
+      auto_cover: true
+      max_title_length: 50
+
+  bilibili:
+    enabled: true
+    cookie_file: "cookies/bilibili_uploader/account.json"
+    title_file: "bilibili_title_p.txt"
+    upload_record: "bilibili_upload_record.txt"
+    settings:
+      default_tid: 21
+      auto_cover: true
+      max_title_length: 80
+
+  xhs:
+    enabled: true
+    cookie_file: "uploader/xhs_uploader/accounts.ini"
+    title_file: "xhs_title_p.txt"
+    upload_record: "xhs_upload_record.json"
+    settings:
+      sign_server: "http://127.0.0.1:11901"
+      sign_method: "local"
+      max_title_length: 100
+      max_description_length: 1000
+
+  tiktok:
+    enabled: true
+    cookie_file: "cookies/tk_uploader/account.json"
+    title_file: "tiktok_title_p.txt"
+    upload_record: "tiktok_upload_record.json"
+    settings:
+      language: "en"
+      auto_hashtag: true
+      max_title_length: 150
+
+  kuaishou:
+    enabled: true
+    cookie_file: "cookies/ks_uploader/account.json"
+    title_file: "kuaishou_title_p.txt"
+    upload_record: "kuaishou_upload_record.json"
+    settings:
+      auto_cover: true
+      max_title_length: 50
+
+# Proxy Configuration
+proxy:
+  enabled: false
+  http: "http://127.0.0.1:7890"
+  https: "http://127.0.0.1:7890"
+
+# Notification Configuration
+notification:
+  slack:
+    enabled: false
+    webhook_url: ""
+    channel: "#general"
+  
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: ""
+    password: ""
+    to_email: ""
+
+# Development Configuration
+development:
+  debug: false
+  headless: false
+  slow_mo: 0 
