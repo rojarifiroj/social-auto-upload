@@ -434,6 +434,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This project is for learning and research purposes only. Please comply with the terms of use of each platform and relevant laws and regulations. Any consequences arising from the use of this tool are the responsibility of the user.
 
+## 📢 Media Copyright Notice
+
+All audio, video, and other media files used with this project must be properly licensed or owned by the user. Please ensure you have the legal rights to use, upload, or distribute any media content. Do not use or upload any media files without proper copyright authorization. The project maintainers and contributors are not responsible for any copyright violations or legal issues arising from the use of unauthorized media.
+
 ## 🔗 Related Links
 
 - [Project Homepage](https://github.com/rojarifiroj/social-auto-upload)
